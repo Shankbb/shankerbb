@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coachbar.io Onboarding</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Styling for the heading */
+    h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #333;
+      position: relative;
+      display: inline-block;
+      margin-top: 50px;
+    }
+
+    /* Shine effect on hover */
+    h1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+      transition: left 0.5s;
+    }
+
+    h1:hover::before {
+      left: 100%;
+    }
+
+    /* Container for buttons */
+    .button-container {
+      margin-top: 30px;
+    }
+
+    /* Styling for buttons */
+    .btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 15px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heading -->
+  <h1>Welcome to the Coachbar.io Onboarding Team</h1>
+
+  <!-- Buttons -->
+  <div class="button-container">
+    <a href="#" class="btn">Sign Up</a>
+    <a href="https://coachbar.io/" class="btn" target="_blank" rel="noopener noreferrer">Coachbar.io</a>
+    <a href="https://support.coachbar.io/support/solutions/articles/153000171485-payouts-rewards" class="btn" target="_blank" rel="noopener noreferrer">KB Article</a>
+  </div>
+
+</body>
+</html>
