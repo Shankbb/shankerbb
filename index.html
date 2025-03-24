@@ -1,116 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script>
-      (function (w, d, s, u) {
-        let j = d.createElement(s);
-        j.async = true;
-        j.src = "https://dev-assets.channelboost.com/scripts/cts.js?uid=" + u;
-        let f = d.getElementsByTagName(s)[0];
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "69f7fdc3-3a77-41fd-9203-0e4cefc7afb8");
-      function trackAndRedirect(event, url) {
-        event.preventDefault(); // Prevents default link action
-        if (typeof trackify !== "undefined" && trackify.trackEvent) {
-          trackify.trackEvent("sign_up");
-          console.log("trackify.trackEvent('sign_up') called");
-          // Open the URL in a new tab after a short delay
-          setTimeout(() => {
-            window.open(url, "_blank", "noopener,noreferrer");
-          }, 300); // Delay for 300ms to allow tracking
-        } else {
-          // If trackify isn't available, open the link immediately
-          window.open(url, "_blank", "noopener,noreferrer");
-        }
-      }
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coachbar.io Onboarding</title>
-    <style>
-      /* General body styling */
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: turquoise; /* Turquoise background */
-        color: white;
-        margin: 0;
-        padding: 0;
-      }
-      /* Styling for the heading */
-      h1 {
-        font-size: 2.5em;
-        font-weight: bold;
-        position: relative;
-        display: inline-block;
-        margin-top: 50px;
-      }
-      h1::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          120deg,
-          rgba(255, 255, 255, 0.2),
-          rgba(255, 255, 255, 0.8),
-          rgba(255, 255, 255, 0.2)
-        );
-        transition: left 0.5s;
-      }
-      h1:hover::before {
-        left: 100%;
-      }
-      /* Container for buttons */
-      .button-container {
-        margin-top: 30px;
-      }
-      /* Styling for buttons */
-      .btn {
-        background-color: #007BFF;
-        color: white;
-        padding: 15px 25px;
-        margin: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1em;
-        text-decoration: none;
-        display: inline-block;
-        transition: background-color 0.3s, transform 0.3s;
-      }
-      .btn:hover {
-        background-color: #0056B3;
-        transform: scale(1.05);
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Heading -->
-    <h1>Welcome to the Coachbar.io Onboarding Team</h1>
-    <!-- Buttons -->
-    <div class="button-container">
-      <a
-        class="btn"
-        onclick="trackAndRedirect(event, 'https://coachbar.io/contact/')"
-        >Sign Up</a
-      >
-      <a
-        href="https://coachbar.io/"
-        class="btn"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Coachbar.io</a
-      >
-      <a
-        href="https://support.coachbar.io/support/solutions/articles/153000171485-payouts-rewards"
-        class="btn"
-        target="_blank"
-        rel="noopener noreferrer"
-        >KB Article</a
-      >
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coachbar Onboarding</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+    }
+
+    /* Styling for the heading */
+    h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+
+    /* Container for buttons */
+    .button-container {
+      margin-bottom: 50px;
+    }
+
+    /* Styling for buttons */
+    .btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 15px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heading -->
+  <h1>Welcome to Coachbar Onboarding Team</h1>
+
+  <!-- Buttons -->
+  <div class="button-container">
+    <a href="https://coachbar.io/contact/" class="btn" target="_blank" rel="noopener noreferrer">Sign Up</a>
+    <a href="https://coachbar.io/" class="btn" target="_blank" rel="noopener noreferrer">Coachbar Website</a>
+    <a href="https://support.coachbar.io/support/solutions/articles/153000171485-payouts-rewards" class="btn" target="_blank" rel="noopener noreferrer">KB Articles</a>
+  </div>
+
+</body>
 </html>
